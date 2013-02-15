@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		883374DF16CE0F5A00639114 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883374DE16CE0F5A00639114 /* Default-568h@2x.png */; };
+		883374E816CE183F00639114 /* TDDownArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 883374E716CE183F00639114 /* TDDownArrow.m */; };
+		887A5E8816CD30DF0069F679 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887A5E8716CD30DF0069F679 /* QuartzCore.framework */; };
+		88B303DD16CCBF9A00D9BC44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B303DC16CCBF9A00D9BC44 /* UIKit.framework */; };
+		88B303DF16CCBF9A00D9BC44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B303DE16CCBF9A00D9BC44 /* Foundation.framework */; };
+		88B303E116CCBF9A00D9BC44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B303E016CCBF9A00D9BC44 /* CoreGraphics.framework */; };
+		88B303E716CCBF9A00D9BC44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88B303E516CCBF9A00D9BC44 /* InfoPlist.strings */; };
+		88B303E916CCBF9A00D9BC44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303E816CCBF9A00D9BC44 /* main.m */; };
+		88B303ED16CCBF9A00D9BC44 /* ViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303EC16CCBF9A00D9BC44 /* ViewAppDelegate.m */; };
+		88B303F016CCBF9A00D9BC44 /* ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303EF16CCBF9A00D9BC44 /* ViewViewController.m */; };
+		88B303F316CCBF9A00D9BC44 /* ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B303F116CCBF9A00D9BC44 /* ViewViewController.xib */; };
+		88B303FB16CCBFD100D9BC44 /* TDRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303FA16CCBFD100D9BC44 /* TDRatingView.m */; };
+		88B3F84716CE0E8A00894764 /* TDUpArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B3F84616CE0E8A00894764 /* TDUpArrow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		883374DE16CE0F5A00639114 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		883374E616CE183F00639114 /* TDDownArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDownArrow.h; sourceTree = "<group>"; };
+		883374E716CE183F00639114 /* TDDownArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDownArrow.m; sourceTree = "<group>"; };
+		887A5E8716CD30DF0069F679 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		88B303D816CCBF9A00D9BC44 /* TDRatingScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDRatingScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B303DC16CCBF9A00D9BC44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		88B303DE16CCBF9A00D9BC44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		88B303E016CCBF9A00D9BC44 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		88B303E416CCBF9A00D9BC44 /* TDRatingScale-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TDRatingScale-Info.plist"; sourceTree = "<group>"; };
+		88B303E616CCBF9A00D9BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		88B303E816CCBF9A00D9BC44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88B303EA16CCBF9A00D9BC44 /* TDRatingScale-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TDRatingScale-Prefix.pch"; sourceTree = "<group>"; };
+		88B303EB16CCBF9A00D9BC44 /* ViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewAppDelegate.h; sourceTree = "<group>"; };
+		88B303EC16CCBF9A00D9BC44 /* ViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewAppDelegate.m; sourceTree = "<group>"; };
+		88B303EE16CCBF9A00D9BC44 /* ViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewViewController.h; sourceTree = "<group>"; };
+		88B303EF16CCBF9A00D9BC44 /* ViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewViewController.m; sourceTree = "<group>"; };
+		88B303F216CCBF9A00D9BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewViewController.xib; sourceTree = "<group>"; };
+		88B303F916CCBFD100D9BC44 /* TDRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRatingView.h; sourceTree = "<group>"; };
+		88B303FA16CCBFD100D9BC44 /* TDRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRatingView.m; sourceTree = "<group>"; };
+		88B3F84516CE0E8A00894764 /* TDUpArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUpArrow.h; sourceTree = "<group>"; };
+		88B3F84616CE0E8A00894764 /* TDUpArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUpArrow.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88B303D516CCBF9A00D9BC44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				887A5E8816CD30DF0069F679 /* QuartzCore.framework in Frameworks */,
+				88B303DD16CCBF9A00D9BC44 /* UIKit.framework in Frameworks */,
+				88B303DF16CCBF9A00D9BC44 /* Foundation.framework in Frameworks */,
+				88B303E116CCBF9A00D9BC44 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88B303CD16CCBF9A00D9BC44 = {
+			isa = PBXGroup;
+			children = (
+				88B303E216CCBF9A00D9BC44 /* TDRatingControl */,
+				88B303DB16CCBF9A00D9BC44 /* Frameworks */,
+				88B303D916CCBF9A00D9BC44 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88B303D916CCBF9A00D9BC44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88B303D816CCBF9A00D9BC44 /* TDRatingScale.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88B303DB16CCBF9A00D9BC44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				887A5E8716CD30DF0069F679 /* QuartzCore.framework */,
+				88B303DC16CCBF9A00D9BC44 /* UIKit.framework */,
+				88B303DE16CCBF9A00D9BC44 /* Foundation.framework */,
+				88B303E016CCBF9A00D9BC44 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88B303E216CCBF9A00D9BC44 /* TDRatingControl */ = {
+			isa = PBXGroup;
+			children = (
+				88B303EB16CCBF9A00D9BC44 /* ViewAppDelegate.h */,
+				88B303EC16CCBF9A00D9BC44 /* ViewAppDelegate.m */,
+				88B303EE16CCBF9A00D9BC44 /* ViewViewController.h */,
+				88B303EF16CCBF9A00D9BC44 /* ViewViewController.m */,
+				88B303F116CCBF9A00D9BC44 /* ViewViewController.xib */,
+				88B303E316CCBF9A00D9BC44 /* Supporting Files */,
+			);
+			path = TDRatingControl;
+			sourceTree = "<group>";
+		};
+		88B303E316CCBF9A00D9BC44 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				883374DE16CE0F5A00639114 /* Default-568h@2x.png */,
+				88B303E416CCBF9A00D9BC44 /* TDRatingScale-Info.plist */,
+				88B303E516CCBF9A00D9BC44 /* InfoPlist.strings */,
+				88B303E816CCBF9A00D9BC44 /* main.m */,
+				88B303EA16CCBF9A00D9BC44 /* TDRatingScale-Prefix.pch */,
+				88B303F916CCBFD100D9BC44 /* TDRatingView.h */,
+				88B303FA16CCBFD100D9BC44 /* TDRatingView.m */,
+				88B3F84516CE0E8A00894764 /* TDUpArrow.h */,
+				88B3F84616CE0E8A00894764 /* TDUpArrow.m */,
+				883374E616CE183F00639114 /* TDDownArrow.h */,
+				883374E716CE183F00639114 /* TDDownArrow.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88B303D716CCBF9A00D9BC44 /* TDRatingScale */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88B303F616CCBF9A00D9BC44 /* Build configuration list for PBXNativeTarget "TDRatingScale" */;
+			buildPhases = (
+				88B303D416CCBF9A00D9BC44 /* Sources */,
+				88B303D516CCBF9A00D9BC44 /* Frameworks */,
+				88B303D616CCBF9A00D9BC44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDRatingScale;
+			productName = TDRatingControl;
+			productReference = 88B303D816CCBF9A00D9BC44 /* TDRatingScale.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88B303CF16CCBF9A00D9BC44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 88B303D216CCBF9A00D9BC44 /* Build configuration list for PBXProject "TDRatingScale" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 88B303CD16CCBF9A00D9BC44;
+			productRefGroup = 88B303D916CCBF9A00D9BC44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88B303D716CCBF9A00D9BC44 /* TDRatingScale */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88B303D616CCBF9A00D9BC44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B303E716CCBF9A00D9BC44 /* InfoPlist.strings in Resources */,
+				88B303F316CCBF9A00D9BC44 /* ViewViewController.xib in Resources */,
+				883374DF16CE0F5A00639114 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88B303D416CCBF9A00D9BC44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B303E916CCBF9A00D9BC44 /* main.m in Sources */,
+				88B303ED16CCBF9A00D9BC44 /* ViewAppDelegate.m in Sources */,
+				88B303F016CCBF9A00D9BC44 /* ViewViewController.m in Sources */,
+				88B303FB16CCBFD100D9BC44 /* TDRatingView.m in Sources */,
+				88B3F84716CE0E8A00894764 /* TDUpArrow.m in Sources */,
+				883374E816CE183F00639114 /* TDDownArrow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		88B303E516CCBF9A00D9BC44 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88B303E616CCBF9A00D9BC44 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		88B303F116CCBF9A00D9BC44 /* ViewViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88B303F216CCBF9A00D9BC44 /* en */,
+			);
+			name = ViewViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88B303F416CCBF9A00D9BC44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		88B303F516CCBF9A00D9BC44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88B303F716CCBF9A00D9BC44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDRatingControl/TDRatingScale-Prefix.pch";
+				INFOPLIST_FILE = "TDRatingControl/TDRatingScale-Info.plist";
+				PRODUCT_NAME = TDRatingScale;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		88B303F816CCBF9A00D9BC44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDRatingControl/TDRatingScale-Prefix.pch";
+				INFOPLIST_FILE = "TDRatingControl/TDRatingScale-Info.plist";
+				PRODUCT_NAME = TDRatingScale;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88B303D216CCBF9A00D9BC44 /* Build configuration list for PBXProject "TDRatingScale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88B303F416CCBF9A00D9BC44 /* Debug */,
+				88B303F516CCBF9A00D9BC44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88B303F616CCBF9A00D9BC44 /* Build configuration list for PBXNativeTarget "TDRatingScale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88B303F716CCBF9A00D9BC44 /* Debug */,
+				88B303F816CCBF9A00D9BC44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88B303CF16CCBF9A00D9BC44 /* Project object */;
+}
