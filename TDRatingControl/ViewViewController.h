@@ -13,7 +13,11 @@
 
 {
     TDRatingView * rating;
-    UILabel *resultLbl;
+    
+    TDRatingView * rating2;
+    TDRatingView * rating3;
+    
+    
 }
 
 @end

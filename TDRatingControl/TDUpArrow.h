@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface TDUpArrow : UIView
+{
+    UIColor *arrowCr;
+    UIColor *strokeCr;
+}
+- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor ;
 
 @end

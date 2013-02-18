@@ -10,5 +10,11 @@
 #import <UIKit/UIKit.h>
 
 @interface TDDownArrow : UIView
+{
+    UIColor *arrowCr;
+    UIColor *strokeCr;
+}
+- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor ;
+
 
 @end
