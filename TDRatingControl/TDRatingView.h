@@ -23,7 +23,6 @@
     NSUInteger heightOfEachNo;
     NSUInteger sliderHeight;
     NSUInteger totalNumberOfRatingViews;
-    NSUInteger difference;
     
     NSMutableArray *itemsAry;
     NSMutableArray *itemsXPositionAry;
@@ -32,14 +31,8 @@
     UIView *sliderView;
     UIView *meterLine;
     
-    UIColor *scaleBgColor;
-    UIColor *arrowColor;
-    UIColor *disableStateTextColor;
-    UIColor *selectedStateTextColor;
-    UIColor *sliderBorderColor;
-    
     id<TDRatingScale>delegate;
-    
+
 }
 @property(nonatomic,assign)NSUInteger maximumRating;
 @property(nonatomic,assign)NSUInteger minimumRating;
@@ -47,15 +40,7 @@
 @property(nonatomic,assign)NSUInteger widthOfEachNo;
 @property(nonatomic,assign)NSUInteger heightOfEachNo;
 @property(nonatomic,assign)NSUInteger sliderHeight;
-@property(nonatomic,assign)NSUInteger difference;
 @property(nonatomic,strong)id<TDRatingScale>delegate;
-@property(nonatomic,assign)UIColor *scaleBgColor;
-@property(nonatomic,strong)UIColor *arrowColor;
-@property(nonatomic,strong)UIColor *disableStateTextColor;
-@property(nonatomic,strong)UIColor *selectedStateTextColor;
-@property(nonatomic,strong)UIColor *sliderBorderColor;
-
-
 
 -(void)setMaximumRating:(NSUInteger)maximum;
 -(void)setMinimumRating:(NSUInteger)minimum;
@@ -63,15 +48,9 @@
 -(void)setWidthOfEachNo:(NSUInteger)width;
 -(void)setHeightOfEachNo:(NSUInteger)height;
 -(void)setSliderHeight:(NSUInteger)height;
--(void)setDifference:(NSUInteger)no;
 -(void)drawRatingControlWithX:(float)x andY:(float)y;
 -(void)drawRatingView;
 -(void)createContainerView;
 -(void)createSliderView;
 -(void)calculateAppropriateSelectorXposition:(UIView *)view;
--(void)setScaleBgColor:(UIColor *)color;
--(void)setArrowColor:(UIColor *)color;
--(void)setDisableStateTextColor:(UIColor *)color;
--(void)setSelectedStateTextColor:(UIColor *)color;
--(void)setSliderBorderColor:(UIColor *)color;
 @end

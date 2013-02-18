@@ -24,7 +24,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //Top
     rating = [[TDRatingView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
     rating.maximumRating = 10;
     rating.minimumRating = 1;
@@ -32,62 +31,34 @@
     rating.widthOfEachNo = 30;
     rating.heightOfEachNo = 40;
     rating.sliderHeight = 17;
-    rating.difference = 1;
+    [rating drawRatingControlWithX:10 andY:50];
     rating.delegate = self;
-    rating.scaleBgColor = [UIColor colorWithRed:27.0f/255 green:135.0f/255 blue:224.0f/255 alpha:1.0];
-    rating.arrowColor = [UIColor redColor];
-    rating.disableStateTextColor = [UIColor colorWithRed:17.0f/255 green:10.0f/255 blue:36.0f/255 alpha:1.0];
-    rating.selectedStateTextColor = [UIColor whiteColor];
-    rating.sliderBorderColor = [UIColor whiteColor];
     rating.backgroundColor = [UIColor clearColor];
-    [rating drawRatingControlWithX:10 andY:60];
     [self.view addSubview:rating];
     
-    //Middle
-    rating2 = [[TDRatingView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-    rating2.maximumRating = 60;
-    rating2.minimumRating = 10;
-    rating2.spaceBetweenEachNo = 0;
-    rating2.widthOfEachNo = 50;
-    rating2.heightOfEachNo = 50;
-    rating2.sliderHeight = 22;
-    rating2.difference = 10;
-    rating2.delegate = self;
-    rating2.scaleBgColor = [UIColor colorWithRed:188.0f/255 green:98.0f/255 blue:150.0f/255 alpha:1.0];
-    rating2.arrowColor = [UIColor colorWithRed:73.0f/255 green:78.0f/255 blue:100.0f/255 alpha:1.0];
-    rating2.disableStateTextColor = [UIColor colorWithRed:40.0f/255 green:38.0f/255 blue:46.0f/255 alpha:1.0];
-    rating2.selectedStateTextColor = [UIColor whiteColor];
-    rating2.sliderBorderColor = [UIColor whiteColor];
-    rating2.backgroundColor = [UIColor clearColor];
-    [rating2 drawRatingControlWithX:13 andY:175];
-    [self.view addSubview:rating2];
-    
-    //Bottom
-    rating3 = [[TDRatingView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-    rating3.maximumRating = 1000;
-    rating3.minimumRating = 0;
-    rating3.spaceBetweenEachNo = 0;
-    rating3.widthOfEachNo = 50;
-    rating3.heightOfEachNo = 50;
-    rating3.sliderHeight = 22;
-    rating3.difference = 200;
-    rating3.delegate = self;
-    rating3.scaleBgColor = [UIColor colorWithRed:40.0f/255 green:38.0f/255 blue:46.0f/255 alpha:1.0];
-    rating3.arrowColor = [UIColor colorWithRed:0.0f/255 green:215.0f/255 blue:255.0f/255 alpha:1.0];
-    rating3.disableStateTextColor = [UIColor colorWithRed:202.0f/255 green:183.0f/255 blue:172.0f/255 alpha:1.0];
-    rating3.selectedStateTextColor = [UIColor colorWithRed:0.0f/255 green:215.0f/255 blue:255.0f/255 alpha:1.0];
-    rating3.sliderBorderColor = [UIColor whiteColor];
-    rating3.backgroundColor = [UIColor clearColor];
-    [rating3 drawRatingControlWithX:13 andY:300];
-    [self.view addSubview:rating3];
-    
-    
+    resultLbl = [[UILabel alloc] initWithFrame:CGRectMake(110, 200, 100, 100)];
+    resultLbl.numberOfLines = 0;
+    resultLbl.backgroundColor = [UIColor colorWithRed:27.0f/255 green:135.0f/255 blue:224.0f/255 alpha:1.0];
+    resultLbl.textAlignment = UITextAlignmentCenter;
+    resultLbl.textColor = [UIColor whiteColor];
+    resultLbl.text = @"1";
+    resultLbl.layer.shadowColor = [[UIColor blackColor] CGColor];
+    resultLbl.font = [UIFont boldSystemFontOfSize:25];
+    resultLbl.layer.shadowOffset = CGSizeMake(2.0, 2.0);
+    resultLbl.layer.shadowRadius = 2.0;
+    resultLbl.layer.shadowOpacity = 0.3;
+    resultLbl.layer.masksToBounds = YES;
+    resultLbl.layer.cornerRadius = 10.0f;
+    resultLbl.userInteractionEnabled = YES;
+    [self.view addSubview:resultLbl];
+
+
 }
 - (void) SelectedRating:(NSString *)scale;
 {
     
-    
-    NSLog(@"SelectedRating:::%@",scale);
+    resultLbl.text = scale;
+
 }
 
 - (void)viewDidUnload
@@ -119,6 +90,8 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+    // Return YES for supported orientations
+    return YES;
 }
+
 @end

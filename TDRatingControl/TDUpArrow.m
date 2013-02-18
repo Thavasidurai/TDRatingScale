@@ -11,15 +11,12 @@
 
 @implementation TDUpArrow
 
-- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor {
-    self = [super initWithFrame:theFrame];
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
     if (self) {
-        
+        // Initialization code
         self.backgroundColor = [UIColor clearColor];
-        
-        arrowCr =arrowColor;
-        strokeCr = strokeColor;
-        
     }
     return self;
 }
@@ -40,19 +37,20 @@
     // Set line width
     CGContextSetLineWidth(context, 2.0);
     // Set colour using RGB intensity values
-    CGContextSetFillColorWithColor(context, arrowCr.CGColor);
-    CGContextSetStrokeColorWithColor(context, strokeCr.CGColor);
+
+    CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 1.0); //red
+    CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 0.0); //clear
     //Draw on the screen
     CGContextDrawPath(context, kCGPathFillStroke);
 }
 
 /*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+}
+*/
 
 @end
