@@ -14,10 +14,9 @@
     if (self) {
         
         self.backgroundColor = [UIColor clearColor];
-        NSLog(@"enter");
-
-        arrowCr =[[UIColor alloc]initWithCGColor:arrowColor.CGColor];
-        strokeCr = [[UIColor alloc]initWithCGColor:strokeCr.CGColor];
+        
+        arrowCr =arrowColor;
+        strokeCr = strokeColor;
         
     }
     return self;
@@ -40,8 +39,8 @@
     CGContextSetLineWidth(context, 2.0);
     // Set colour using RGB intensity values
     
-    CGContextSetFillColorWithColor(context, (__bridge CGColorRef)(arrowCr));
-    CGContextSetStrokeColorWithColor(context, (__bridge CGColorRef)(strokeCr));
+    CGContextSetFillColorWithColor(context, arrowCr.CGColor);
+    CGContextSetStrokeColorWithColor(context, strokeCr.CGColor);
     //Draw on the screen
     CGContextDrawPath(context, kCGPathFillStroke);
 }

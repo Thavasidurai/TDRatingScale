@@ -49,7 +49,7 @@
 @property(nonatomic,assign)NSUInteger sliderHeight;
 @property(nonatomic,assign)NSUInteger difference;
 @property(nonatomic,strong)id<TDRatingScale>delegate;
-@property(nonatomic,assign)UIColor *scaleBgColor;
+@property(nonatomic,strong)UIColor *scaleBgColor;
 @property(nonatomic,strong)UIColor *arrowColor;
 @property(nonatomic,strong)UIColor *disableStateTextColor;
 @property(nonatomic,strong)UIColor *selectedStateTextColor;

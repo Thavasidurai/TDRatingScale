@@ -15,7 +15,7 @@
 @implementation TDRatingView
 @synthesize  maximumRating = maximumRating_,minimumRating = minimumRating_,spaceBetweenEachNo = spaceBetweenEachNo_, difference = difference_;
 @synthesize widthOfEachNo = widthOfEachNo_ , heightOfEachNo = heightOfEachNo_ , sliderHeight = sliderHeight_,delegate;
-@synthesize scaleBgColor = scaleBgColor_,arrowColor = arrowColor_,disableStateTextColor = disableStateTextColor_,selectedStateTextColor = selectedStateTextColor_,sliderBorderColor = sliderBorderColor_;
+@synthesize scaleBgColor,arrowColor,disableStateTextColor,selectedStateTextColor,sliderBorderColor;
 - (id)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
@@ -23,7 +23,6 @@
     if (self) {
         
         // setup the initial properties of the
-        
         
     }
     
@@ -57,23 +56,23 @@
 }
 -(void)setScaleBgColor:(UIColor *)color
 {
-    scaleBgColor_ = color;
+    scaleBgColor = color;
 }
 -(void)setArrowColor:(UIColor *)color
 {
-    arrowColor_ = color;
+    arrowColor = color;
 }
 -(void)setDisableStateTextColor:(UIColor *)color
 {
-    disableStateTextColor_ = color;
+    disableStateTextColor = color;
 }
 -(void)setSelectedStateTextColor:(UIColor *)color
 {
-    selectedStateTextColor_ = color;
+    selectedStateTextColor = color;
 }
 -(void)setSliderBorderColor:(UIColor *)color
 {
-    sliderBorderColor_ = color;
+    sliderBorderColor = color;
 }
 -(void)setDifference:(NSUInteger)no
 {
@@ -108,8 +107,9 @@
 -(void)createContainerView
 {
     //Container view
+    NSLog(@"scaleBgColor:::%@",scaleBgColor);
     containerView = [[UIView alloc]initWithFrame:CGRectMake(0, sliderHeight_, self.frame.size.width, heightOfEachNo_)];
-    containerView.backgroundColor = scaleBgColor_;
+    containerView.backgroundColor = scaleBgColor;
     containerView.layer.shadowColor = [[UIColor lightGrayColor] CGColor];
     containerView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     containerView.layer.shadowOpacity = 1.0f;
@@ -118,9 +118,6 @@
     [self addSubview:containerView];
     
     [self createSliderView];
-    
-    
-    
     
 }
 -(void)createSliderView
@@ -134,10 +131,8 @@
     sliderView.layer.shadowOpacity = 1.0f;
     sliderView.layer.shadowRadius = 2.0f;
     sliderView.layer.cornerRadius = 2;
-    NSLog(@"DoneB4");
-    sliderView.layer.borderColor = sliderBorderColor_.CGColor;
-    NSLog(@"DoneA6");
-
+    sliderView.layer.borderColor = [sliderBorderColor CGColor];
+    
     sliderView.layer.borderWidth = 2.0f;
     [self insertSubview:sliderView aboveSubview:containerView];
     
@@ -146,7 +141,7 @@
     upArrow.backgroundColor = [UIColor clearColor];
     [sliderView addSubview:upArrow];
     
-    TDUpArrow *triangleUp = [[TDUpArrow alloc]initWithFrame:CGRectMake(0, 0, upArrow.frame.size.width, upArrow.frame.size.height) arrowColor:arrowColor_ strokeColor:sliderBorderColor_];
+    TDUpArrow *triangleUp = [[TDUpArrow alloc]initWithFrame:CGRectMake(0, 0, upArrow.frame.size.width, upArrow.frame.size.height) arrowColor:arrowColor strokeColor:sliderBorderColor];
     
     [upArrow addSubview:triangleUp];
     
@@ -155,7 +150,7 @@
     downArrow.backgroundColor = [UIColor clearColor];
     [sliderView addSubview:downArrow];
     
-    TDDownArrow *triangleDown = [[TDDownArrow alloc]initWithFrame:CGRectMake(0, 0, downArrow.frame.size.width, downArrow.frame.size.height) arrowColor:arrowColor_ strokeColor:sliderBorderColor_];
+    TDDownArrow *triangleDown = [[TDDownArrow alloc]initWithFrame:CGRectMake(0, 0, downArrow.frame.size.width, downArrow.frame.size.height) arrowColor:arrowColor strokeColor:sliderBorderColor];
     [sliderView addSubview:triangleDown];
     
     UIPanGestureRecognizer* panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
@@ -185,7 +180,7 @@
         lblMyLable.text = [NSString stringWithFormat:@"%d",differ];
         differ = differ + difference_;
         
-        lblMyLable.textColor = disableStateTextColor_;
+        lblMyLable.textColor = disableStateTextColor;
         
         lblMyLable.layer.shadowColor = [lblMyLable.textColor CGColor];
         lblMyLable.layer.shadowOffset = CGSizeMake(0.0, 0.0);
@@ -206,13 +201,13 @@
     }
     
     UILabel *firstLbl = [itemsAry objectAtIndex:0];
-    firstLbl.textColor = selectedStateTextColor_;
+    firstLbl.textColor = selectedStateTextColor;
     
     
 }
 -(void)changeTextColor:(UILabel *)myLbl
 {
-    myLbl.textColor = selectedStateTextColor_;
+    myLbl.textColor = selectedStateTextColor;
 }
 - (void)handleTap:(UIPanGestureRecognizer *)recognizer {
     
@@ -228,9 +223,9 @@
     
     for(UILabel *mylbl in itemsAry) // Use fast enumeration to iterate through the array
     {
-        if (mylbl.textColor == selectedStateTextColor_) {
+        if (mylbl.textColor == selectedStateTextColor) {
             
-            mylbl.textColor = disableStateTextColor_;
+            mylbl.textColor = disableStateTextColor;
             
         }
     }
@@ -258,16 +253,16 @@
         
         for(UILabel *mylbl in itemsAry)
         {
-            if (mylbl.textColor == selectedStateTextColor_) {
+            if (mylbl.textColor == selectedStateTextColor) {
                 
-                mylbl.textColor = disableStateTextColor_;
+                mylbl.textColor = disableStateTextColor;
                 
             }
         }
         
         NSUInteger index = [itemsXPositionAry indexOfObject:[NSString stringWithFormat:@"%f",recognizer.view.frame.origin.x]];
         UILabel * uil = [itemsAry objectAtIndex:index];
-        uil.textColor = selectedStateTextColor_;
+        uil.textColor = selectedStateTextColor;
         
     }
     if (recognizer.state == UIGestureRecognizerStateEnded) {
@@ -333,9 +328,9 @@
     
     for(UILabel *mylbl in itemsAry) // Use fast enumeration to iterate through the array
     {
-        if (mylbl.textColor == selectedStateTextColor_) {
+        if (mylbl.textColor == selectedStateTextColor) {
             
-            mylbl.textColor = disableStateTextColor_;
+            mylbl.textColor = disableStateTextColor;
             
         }
     }
@@ -344,7 +339,7 @@
     //finding index position of selected view
     NSUInteger index = [itemsXPositionAry indexOfObject:[NSString stringWithFormat:@"%f",selectedViewX]];
     UILabel *myLabel = [itemsAry objectAtIndex:index];
-    myLabel.textColor = selectedStateTextColor_;
+    myLabel.textColor = selectedStateTextColor;
     [delegate SelectedRating:myLabel.text];
     
     
