@@ -9,16 +9,20 @@
 #import "TDDownArrow.h"
 
 @implementation TDDownArrow
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor {
+    self = [super initWithFrame:theFrame];
     if (self) {
-        // Initialization code
+        
         self.backgroundColor = [UIColor clearColor];
+        NSLog(@"enter");
+
+        arrowCr =[[UIColor alloc]initWithCGColor:arrowColor.CGColor];
+        strokeCr = [[UIColor alloc]initWithCGColor:strokeCr.CGColor];
+        
     }
     return self;
 }
+
 - (void)drawRect:(CGRect)rect
 {
     // Get the current graphics context
@@ -36,20 +40,20 @@
     CGContextSetLineWidth(context, 2.0);
     // Set colour using RGB intensity values
     
-    CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 1.0); //red
-    CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 0.0); //clear
+    CGContextSetFillColorWithColor(context, (__bridge CGColorRef)(arrowCr));
+    CGContextSetStrokeColorWithColor(context, (__bridge CGColorRef)(strokeCr));
     //Draw on the screen
     CGContextDrawPath(context, kCGPathFillStroke);
 }
 
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end
