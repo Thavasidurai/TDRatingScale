@@ -8,10 +8,10 @@
 
 
 #import <UIKit/UIKit.h>
-@protocol TDRatingScale <NSObject>
+@protocol TDRatingViewDelegate <NSObject>
 
 @required
-- (void) SelectedRating:(NSString *)scale;
+- (void) selectedRating:(NSString *)scale;
 @end
 
 @interface TDRatingView : UIView<UIGestureRecognizerDelegate>
@@ -38,7 +38,7 @@
     UIColor *selectedStateTextColor;
     UIColor *sliderBorderColor;
     
-    id<TDRatingScale>delegate;
+    id<TDRatingViewDelegate>delegate;
     
 }
 @property(nonatomic,assign)NSUInteger maximumRating;
@@ -48,30 +48,16 @@
 @property(nonatomic,assign)NSUInteger heightOfEachNo;
 @property(nonatomic,assign)NSUInteger sliderHeight;
 @property(nonatomic,assign)NSUInteger difference;
-@property(nonatomic,strong)id<TDRatingScale>delegate;
+@property(nonatomic,strong)id<TDRatingViewDelegate>delegate;
 @property(nonatomic,strong)UIColor *scaleBgColor;
 @property(nonatomic,strong)UIColor *arrowColor;
 @property(nonatomic,strong)UIColor *disableStateTextColor;
 @property(nonatomic,strong)UIColor *selectedStateTextColor;
 @property(nonatomic,strong)UIColor *sliderBorderColor;
 
-
-
--(void)setMaximumRating:(NSUInteger)maximum;
--(void)setMinimumRating:(NSUInteger)minimum;
--(void)setSpaceBetweenEachNo:(NSUInteger)space;
--(void)setWidthOfEachNo:(NSUInteger)width;
--(void)setHeightOfEachNo:(NSUInteger)height;
--(void)setSliderHeight:(NSUInteger)height;
--(void)setDifference:(NSUInteger)no;
--(void)drawRatingControlWithX:(float)x andY:(float)y;
+-(void)drawRatingControlWithX:(float)x Y:(float)y;
 -(void)drawRatingView;
 -(void)createContainerView;
 -(void)createSliderView;
 -(void)calculateAppropriateSelectorXposition:(UIView *)view;
--(void)setScaleBgColor:(UIColor *)color;
--(void)setArrowColor:(UIColor *)color;
--(void)setDisableStateTextColor:(UIColor *)color;
--(void)setSelectedStateTextColor:(UIColor *)color;
--(void)setSliderBorderColor:(UIColor *)color;
 @end

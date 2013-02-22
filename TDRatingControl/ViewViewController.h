@@ -9,11 +9,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TDRatingView.h"
-@interface ViewViewController : UIViewController<TDRatingScale>
+@interface ViewViewController : UIViewController<TDRatingViewDelegate>
 
 {
-    TDRatingView * rating;
-    
+    TDRatingView * rating1;
     TDRatingView * rating2;
     TDRatingView * rating3;
     

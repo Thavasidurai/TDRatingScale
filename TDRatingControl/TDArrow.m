@@ -1,5 +1,5 @@
 //
-//  TDUpArrow.m
+//  TDArrow.m
 //  TDRatingControl
 //
 //  Created by Thavasidurai on 14/02/13.
@@ -7,11 +7,12 @@
 //
 
 
-#import "TDUpArrow.h"
+#import "TDArrow.h"
 
-@implementation TDUpArrow
+@implementation TDArrow
 
-- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor {
+- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor isUpArrow:(BOOL)arrowType ;
+{
     self = [super initWithFrame:theFrame];
     if (self) {
         
@@ -19,6 +20,7 @@
         
         arrowCr =arrowColor;
         strokeCr = strokeColor;
+        arrow = arrowType;
         
     }
     return self;
@@ -30,11 +32,25 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     //Begin the path
     CGContextBeginPath(context);
-    // Starting Point
-    CGContextMoveToPoint(context, rect.size.width/2,0);
-    CGContextAddLineToPoint(context, rect.size.width, rect.size.height);
-    CGContextAddLineToPoint(context, 0, rect.size.height);
-    // Close the path
+    
+    if (arrow) {
+        
+        // Starting Point
+        CGContextMoveToPoint(context, rect.size.width/2,0);
+        CGContextAddLineToPoint(context, rect.size.width, rect.size.height);
+        CGContextAddLineToPoint(context, 0, rect.size.height);
+        // Close the path
+
+    }
+    else
+    {
+        // Starting Point
+        CGContextMoveToPoint(context, 0,0);
+        CGContextAddLineToPoint(context, rect.size.width, 0);
+        CGContextAddLineToPoint(context, rect.size.width/2, rect.size.height);
+        // Close the path
+
+    }
     // Closing the path will extending a line from
     CGContextClosePath(context);
     // Set line width

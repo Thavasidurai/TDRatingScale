@@ -1,5 +1,5 @@
 //
-//  TDUpArrow.h
+//  TDArrow.h
 //  TDRatingControl
 //
 //  Created by Thavasidurai on 14/02/13.
@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface TDUpArrow : UIView
+@interface TDArrow : UIView
 {
     UIColor *arrowCr;
     UIColor *strokeCr;
+    BOOL arrow;
 }
-- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor ;
+- (id)initWithFrame:(CGRect)theFrame arrowColor:(UIColor *)arrowColor strokeColor:(UIColor *)strokeColor isUpArrow:(BOOL)arrowType ;
 
 @end

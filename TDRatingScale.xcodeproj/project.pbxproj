@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		883374DF16CE0F5A00639114 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883374DE16CE0F5A00639114 /* Default-568h@2x.png */; };
-		883374E816CE183F00639114 /* TDDownArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 883374E716CE183F00639114 /* TDDownArrow.m */; };
 		887A5E8816CD30DF0069F679 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887A5E8716CD30DF0069F679 /* QuartzCore.framework */; };
 		88B303DD16CCBF9A00D9BC44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B303DC16CCBF9A00D9BC44 /* UIKit.framework */; };
 		88B303DF16CCBF9A00D9BC44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B303DE16CCBF9A00D9BC44 /* Foundation.framework */; };
@@ -19,13 +18,11 @@
 		88B303F016CCBF9A00D9BC44 /* ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303EF16CCBF9A00D9BC44 /* ViewViewController.m */; };
 		88B303F316CCBF9A00D9BC44 /* ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B303F116CCBF9A00D9BC44 /* ViewViewController.xib */; };
 		88B303FB16CCBFD100D9BC44 /* TDRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303FA16CCBFD100D9BC44 /* TDRatingView.m */; };
-		88B3F84716CE0E8A00894764 /* TDUpArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B3F84616CE0E8A00894764 /* TDUpArrow.m */; };
+		88B3F84716CE0E8A00894764 /* TDArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B3F84616CE0E8A00894764 /* TDArrow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		883374DE16CE0F5A00639114 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		883374E616CE183F00639114 /* TDDownArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDownArrow.h; sourceTree = "<group>"; };
-		883374E716CE183F00639114 /* TDDownArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDDownArrow.m; sourceTree = "<group>"; };
 		887A5E8716CD30DF0069F679 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		88B303D816CCBF9A00D9BC44 /* TDRatingScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDRatingScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B303DC16CCBF9A00D9BC44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -42,8 +39,8 @@
 		88B303F216CCBF9A00D9BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewViewController.xib; sourceTree = "<group>"; };
 		88B303F916CCBFD100D9BC44 /* TDRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRatingView.h; sourceTree = "<group>"; };
 		88B303FA16CCBFD100D9BC44 /* TDRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRatingView.m; sourceTree = "<group>"; };
-		88B3F84516CE0E8A00894764 /* TDUpArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUpArrow.h; sourceTree = "<group>"; };
-		88B3F84616CE0E8A00894764 /* TDUpArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUpArrow.m; sourceTree = "<group>"; };
+		88B3F84516CE0E8A00894764 /* TDArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TDArrow.h; sourceTree = "<group>"; };
+		88B3F84616CE0E8A00894764 /* TDArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDArrow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +109,8 @@
 				88B303EA16CCBF9A00D9BC44 /* TDRatingScale-Prefix.pch */,
 				88B303F916CCBFD100D9BC44 /* TDRatingView.h */,
 				88B303FA16CCBFD100D9BC44 /* TDRatingView.m */,
-				88B3F84516CE0E8A00894764 /* TDUpArrow.h */,
-				88B3F84616CE0E8A00894764 /* TDUpArrow.m */,
-				883374E616CE183F00639114 /* TDDownArrow.h */,
-				883374E716CE183F00639114 /* TDDownArrow.m */,
+				88B3F84516CE0E8A00894764 /* TDArrow.h */,
+				88B3F84616CE0E8A00894764 /* TDArrow.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,8 +182,7 @@
 				88B303ED16CCBF9A00D9BC44 /* ViewAppDelegate.m in Sources */,
 				88B303F016CCBF9A00D9BC44 /* ViewViewController.m in Sources */,
 				88B303FB16CCBFD100D9BC44 /* TDRatingView.m in Sources */,
-				88B3F84716CE0E8A00894764 /* TDUpArrow.m in Sources */,
-				883374E816CE183F00639114 /* TDDownArrow.m in Sources */,
+				88B3F84716CE0E8A00894764 /* TDArrow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +267,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDRatingControl/TDRatingScale-Prefix.pch";
 				INFOPLIST_FILE = "TDRatingControl/TDRatingScale-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = TDRatingScale;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -285,6 +280,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDRatingControl/TDRatingScale-Prefix.pch";
 				INFOPLIST_FILE = "TDRatingControl/TDRatingScale-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = TDRatingScale;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
