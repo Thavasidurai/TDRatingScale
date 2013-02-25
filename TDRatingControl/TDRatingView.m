@@ -22,18 +22,18 @@
     if (self) {
         
         //Default Properties
-        maximumRating = 10;
-        minimumRating = 1;
-        spaceBetweenEachNo = 0;
-        widthOfEachNo = 30;
-        heightOfEachNo = 40;
-        sliderHeight = 17;
-        difference = 1;
-        scaleBgColor = [UIColor colorWithRed:27.0f/255 green:135.0f/255 blue:224.0f/255 alpha:1.0];
-        arrowColor = [UIColor redColor];
-        disableStateTextColor = [UIColor colorWithRed:17.0f/255 green:10.0f/255 blue:36.0f/255 alpha:1.0];
-        selectedStateTextColor = [UIColor whiteColor];
-        sliderBorderColor = [UIColor whiteColor];
+        self.maximumRating = 10;
+        self.minimumRating = 1;
+        self.spaceBetweenEachNo = 0;
+        self.widthOfEachNo = 30;
+        self.heightOfEachNo = 40;
+        self.sliderHeight = 17;
+        self.difference = 1;
+        self.scaleBgColor = [UIColor colorWithRed:27.0f/255 green:135.0f/255 blue:224.0f/255 alpha:1.0];
+        self.arrowColor = [UIColor redColor];
+        self.disableStateTextColor = [UIColor colorWithRed:17.0f/255 green:10.0f/255 blue:36.0f/255 alpha:1.0];
+        self.selectedStateTextColor = [UIColor whiteColor];
+        self.sliderBorderColor = [UIColor whiteColor];
 
     }
     return self;
@@ -44,17 +44,16 @@
 -(void)drawRatingControlWithX:(float)x Y:(float)y;
 {
     
-    //    totalNumberOfRatingViews = (maximumRating - minimumRating)+1;
     // formula
     // tn = a+(n-1)d
     //n = 1 + (tn - a)/d
     
-    totalNumberOfRatingViews = 1 + ((maximumRating - minimumRating)/difference);
+    totalNumberOfRatingViews = 1 + ((self.maximumRating - self.minimumRating)/self.difference);
     
-    float width =  totalNumberOfRatingViews *widthOfEachNo + (totalNumberOfRatingViews +1)*spaceBetweenEachNo;
+    float width =  totalNumberOfRatingViews *self.widthOfEachNo + (totalNumberOfRatingViews +1)*self.spaceBetweenEachNo;
     //here +1 is to add space in front and back
     
-    float height = heightOfEachNo + (sliderHeight *2);
+    float height = self.heightOfEachNo + (self.sliderHeight *2);
     self.frame = CGRectMake(x, y, width, height);
     
     [self createContainerView];
@@ -63,13 +62,13 @@
 -(void)createContainerView
 {
     //Container view
-    containerView = [[UIView alloc]initWithFrame:CGRectMake(0, sliderHeight, self.frame.size.width, heightOfEachNo)];
-    containerView.backgroundColor = scaleBgColor;
+    containerView = [[UIView alloc]initWithFrame:CGRectMake(0, self.sliderHeight, self.frame.size.width, self.heightOfEachNo)];
+    containerView.backgroundColor = self.scaleBgColor;
     containerView.layer.shadowColor = [[UIColor lightGrayColor] CGColor];
     containerView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     containerView.layer.shadowOpacity = 1.0f;
     containerView.layer.shadowRadius = 1.0f;
-    containerView.layer.cornerRadius = heightOfEachNo/2;
+    containerView.layer.cornerRadius = self.heightOfEachNo/2;
     [self addSubview:containerView];
     
     [self createSliderView];
@@ -77,34 +76,34 @@
 }
 -(void)createSliderView
 {
-    float y =  (heightOfEachNo  + sliderHeight) + spaceBetweenSliderandRatingView;
+    float y =  (self.heightOfEachNo  + self.sliderHeight) + spaceBetweenSliderandRatingView;
     
-    float height = sliderHeight - (2*spaceBetweenSliderandRatingView);
-    sliderView = [[UIView alloc]initWithFrame:CGRectMake(spaceBetweenEachNo, 0, widthOfEachNo, self.frame.size.height)];
+    float height = self.sliderHeight - (2*spaceBetweenSliderandRatingView);
+    sliderView = [[UIView alloc]initWithFrame:CGRectMake(self.spaceBetweenEachNo, 0, self.widthOfEachNo, self.frame.size.height)];
     sliderView.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
     sliderView.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
     sliderView.layer.shadowOpacity = 1.0f;
     sliderView.layer.shadowRadius = 2.0f;
     sliderView.layer.cornerRadius = 2;
-    sliderView.layer.borderColor = [sliderBorderColor CGColor];
+    sliderView.layer.borderColor = [self.sliderBorderColor CGColor];
     
     sliderView.layer.borderWidth = 2.0f;
     [self insertSubview:sliderView aboveSubview:containerView];
     
     
-    UIView *upArrow = [[UIView alloc]initWithFrame:CGRectMake(0, y, widthOfEachNo, height)];
+    UIView *upArrow = [[UIView alloc]initWithFrame:CGRectMake(0, y, self.widthOfEachNo, height)];
     upArrow.backgroundColor = [UIColor clearColor];
     [sliderView addSubview:upArrow];
     
-    TDArrow *triangleUp = [[TDArrow alloc]initWithFrame:CGRectMake(0, 0, upArrow.frame.size.width, upArrow.frame.size.height) arrowColor:arrowColor strokeColor:sliderBorderColor isUpArrow:YES];
+    TDArrow *triangleUp = [[TDArrow alloc]initWithFrame:CGRectMake(0, 0, upArrow.frame.size.width, upArrow.frame.size.height) arrowColor:self.arrowColor strokeColor:self.sliderBorderColor isUpArrow:YES];
     [upArrow addSubview:triangleUp];
     
     
-    UIView *downArrow = [[UIView alloc]initWithFrame:CGRectMake(0, 0, widthOfEachNo, height)];
+    UIView *downArrow = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.widthOfEachNo, height)];
     downArrow.backgroundColor = [UIColor clearColor];
     [sliderView addSubview:downArrow];
     
-    TDArrow *triangleDown = [[TDArrow alloc]initWithFrame:CGRectMake(0, 0, upArrow.frame.size.width, upArrow.frame.size.height) arrowColor:arrowColor strokeColor:sliderBorderColor isUpArrow:NO];
+    TDArrow *triangleDown = [[TDArrow alloc]initWithFrame:CGRectMake(0, 0, upArrow.frame.size.width, upArrow.frame.size.height) arrowColor:self.arrowColor strokeColor:self.sliderBorderColor isUpArrow:NO];
     [sliderView addSubview:triangleDown];
     
     UIPanGestureRecognizer* panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
@@ -118,50 +117,50 @@
 
 -(void)drawRatingView
 {
-    float itemX = spaceBetweenEachNo;
+    float itemX = self.spaceBetweenEachNo;
     float itemY = 0;
-    int differ = minimumRating;
+    int differ = self.minimumRating;
     //creating items
     itemsAry = [NSMutableArray new];
     itemsXPositionAry = [NSMutableArray new];
-    for (int i =minimumRating; i<maximumRating+1; i = i+difference) {
+    for (int i =self.minimumRating; i<self.maximumRating+1; i = i+self.difference) {
         
-        UILabel *lblMyLable = [[UILabel alloc] initWithFrame:CGRectMake(itemX, itemY, widthOfEachNo, heightOfEachNo)];
-        lblMyLable.numberOfLines = 0;
-        lblMyLable.tag=i;
-        lblMyLable.backgroundColor = [UIColor clearColor];
-        lblMyLable.textAlignment = UITextAlignmentCenter;
-        lblMyLable.text = [NSString stringWithFormat:@"%d",differ];
-        differ = differ + difference;
+        UILabel *lblMyLabel = [[UILabel alloc] initWithFrame:CGRectMake(itemX, itemY, self.widthOfEachNo, self.heightOfEachNo)];
+        lblMyLabel.numberOfLines = 0;
+        lblMyLabel.tag=i;
+        lblMyLabel.backgroundColor = [UIColor clearColor];
+        lblMyLabel.textAlignment = UITextAlignmentCenter;
+        lblMyLabel.text = [NSString stringWithFormat:@"%d",differ];
+        differ = differ + self.difference;
         
-        lblMyLable.textColor = disableStateTextColor;
+        lblMyLabel.textColor = self.disableStateTextColor;
         
-        lblMyLable.layer.shadowColor = [lblMyLable.textColor CGColor];
-        lblMyLable.layer.shadowOffset = CGSizeMake(0.0, 0.0);
-        lblMyLable.layer.shadowRadius = 2.0;
-        lblMyLable.layer.shadowOpacity = 0.3;
-        lblMyLable.layer.masksToBounds = NO;
-        lblMyLable.userInteractionEnabled = YES;
-        [containerView addSubview:lblMyLable];
-        itemX = lblMyLable.frame.origin.x + widthOfEachNo + spaceBetweenEachNo;
-        [itemsAry addObject:lblMyLable];
-        [itemsXPositionAry addObject:[NSString stringWithFormat:@"%f",lblMyLable.frame.origin.x]];
+        lblMyLabel.layer.shadowColor = [lblMyLabel.textColor CGColor];
+        lblMyLabel.layer.shadowOffset = CGSizeMake(0.0, 0.0);
+        lblMyLabel.layer.shadowRadius = 2.0;
+        lblMyLabel.layer.shadowOpacity = 0.3;
+        lblMyLabel.layer.masksToBounds = NO;
+        lblMyLabel.userInteractionEnabled = YES;
+        [containerView addSubview:lblMyLabel];
+        itemX = lblMyLabel.frame.origin.x + self.widthOfEachNo + self.spaceBetweenEachNo;
+        [itemsAry addObject:lblMyLabel];
+        [itemsXPositionAry addObject:[NSString stringWithFormat:@"%f",lblMyLabel.frame.origin.x]];
         
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
         [singleTap setNumberOfTapsRequired:1];
         [singleTap setNumberOfTouchesRequired:1];
-        [lblMyLable addGestureRecognizer:singleTap];
+        [lblMyLabel addGestureRecognizer:singleTap];
         
     }
     
     UILabel *firstLbl = [itemsAry objectAtIndex:0];
-    firstLbl.textColor = selectedStateTextColor;
+    firstLbl.textColor = self.selectedStateTextColor;
     
     
 }
 -(void)changeTextColor:(UILabel *)myLbl
 {
-    myLbl.textColor = selectedStateTextColor;
+    myLbl.textColor = self.selectedStateTextColor;
 }
 - (void)handleTap:(UIPanGestureRecognizer *)recognizer {
     
@@ -179,9 +178,9 @@
     
     for(UILabel *mylbl in itemsAry) // Use fast enumeration to iterate through the array
     {
-        if (mylbl.textColor == selectedStateTextColor) {
+        if (mylbl.textColor == self.selectedStateTextColor) {
             
-            mylbl.textColor = disableStateTextColor;
+            mylbl.textColor = self.disableStateTextColor;
             
         }
     }
@@ -193,7 +192,6 @@
     UILabel *myLabel = [itemsAry objectAtIndex:index];
     [self performSelector:@selector(changeTextColor:) withObject:myLabel afterDelay:0.5];
     [delegate selectedRating:myLabel.text];
-    
     
 }
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer {
@@ -209,26 +207,22 @@
         
         for(UILabel *mylbl in itemsAry)
         {
-            if (mylbl.textColor == selectedStateTextColor) {
+            if (mylbl.textColor == self.selectedStateTextColor) {
                 
-                mylbl.textColor = disableStateTextColor;
+                mylbl.textColor = self.disableStateTextColor;
                 
             }
         }
         
         NSUInteger index = [itemsXPositionAry indexOfObject:[NSString stringWithFormat:@"%f",recognizer.view.frame.origin.x]];
         UILabel * uil = [itemsAry objectAtIndex:index];
-        uil.textColor = selectedStateTextColor;
+        uil.textColor = self.selectedStateTextColor;
         
     }
     if (recognizer.state == UIGestureRecognizerStateEnded) {
         
         [self calculateAppropriateSelectorXposition:recognizer.view];
     }
-    
-    
-    
-    
     
 }
 #pragma mark - Calculate position
@@ -257,26 +251,35 @@
             break;
     }
     
-    if (selectorViewX > spaceBetweenEachNo) {
+    if (selectorViewX > self.spaceBetweenEachNo) {
         
         float nextValue = itemXposition - selectorViewX;
         float previousValue = selectorViewX -itempreviousXpostion;
         
         if (nextValue > previousValue) {
-            
-            view.frame = CGRectMake(itempreviousXpostion, view.frame.origin.y, view.frame.size.width, view.frame.size.height);
+                        
+            CGRect viewFrame = view.frame;
+            viewFrame.origin.x = itempreviousXpostion;
+            view.frame = viewFrame;
+
             
         }
         else {
-            
-            view.frame = CGRectMake(itemXposition, view.frame.origin.y, view.frame.size.width, view.frame.size.height);
+                        
+            CGRect viewFrame = view.frame;
+            viewFrame.origin.x = itemXposition;
+            view.frame = viewFrame;
+
             
         }
         
     }
     else{
-        //limiting pan gesture x position
-        view.frame = CGRectMake(spaceBetweenEachNo, view.frame.origin.y, view.frame.size.width, view.frame.size.height);
+        //limiting pan gesture x position        
+        CGRect viewFrame = view.frame;
+        viewFrame.origin.x = self.spaceBetweenEachNo;
+        view.frame = viewFrame;
+
         
     }
     
@@ -284,18 +287,17 @@
     
     for(UILabel *mylbl in itemsAry) // Use fast enumeration to iterate through the array
     {
-        if (mylbl.textColor == selectedStateTextColor) {
+        if (mylbl.textColor == self.selectedStateTextColor) {
             
-            mylbl.textColor = disableStateTextColor;
+            mylbl.textColor = self.disableStateTextColor;
             
         }
     }
     
-    
     //finding index position of selected view
     NSUInteger index = [itemsXPositionAry indexOfObject:[NSString stringWithFormat:@"%f",selectedViewX]];
     UILabel *myLabel = [itemsAry objectAtIndex:index];
-    myLabel.textColor = selectedStateTextColor;
+    myLabel.textColor = self.selectedStateTextColor;
     [delegate selectedRating:myLabel.text];
     
     
