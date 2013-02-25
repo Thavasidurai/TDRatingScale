@@ -8,7 +8,7 @@ The TDRatingScale is similar to regular UISlider except that it has some best cu
 HOW TO USE IT IN YOUR CODE
 --------------------------------------------------------------
 
-1.Copy and Paste "TDRatingScale" folder in your project and Also add them to your project by right clicking your project in XCode and choose "Add files to your project".
+1.Copy and Paste "TDRatingScale" folder in your project and Also add them to your project by right clicking your project in XCode and choose "Add files to your project".Note "TDRatingScale" folder can be found under TDRatingControl > "TDRatingScale" in TDRatingScale Project.
 
 2.Add QuartzCore framework to your project
 
