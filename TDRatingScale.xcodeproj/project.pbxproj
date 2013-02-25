@@ -17,8 +17,8 @@
 		88B303ED16CCBF9A00D9BC44 /* ViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303EC16CCBF9A00D9BC44 /* ViewAppDelegate.m */; };
 		88B303F016CCBF9A00D9BC44 /* ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303EF16CCBF9A00D9BC44 /* ViewViewController.m */; };
 		88B303F316CCBF9A00D9BC44 /* ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B303F116CCBF9A00D9BC44 /* ViewViewController.xib */; };
-		88B303FB16CCBFD100D9BC44 /* TDRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B303FA16CCBFD100D9BC44 /* TDRatingView.m */; };
-		88B3F84716CE0E8A00894764 /* TDArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B3F84616CE0E8A00894764 /* TDArrow.m */; };
+		88B46F5316DB9FAA00ECFEF7 /* TDArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B46F5016DB9FAA00ECFEF7 /* TDArrow.m */; };
+		88B46F5416DB9FAA00ECFEF7 /* TDRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B46F5216DB9FAA00ECFEF7 /* TDRatingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +37,10 @@
 		88B303EE16CCBF9A00D9BC44 /* ViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewViewController.h; sourceTree = "<group>"; };
 		88B303EF16CCBF9A00D9BC44 /* ViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewViewController.m; sourceTree = "<group>"; };
 		88B303F216CCBF9A00D9BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewViewController.xib; sourceTree = "<group>"; };
-		88B303F916CCBFD100D9BC44 /* TDRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRatingView.h; sourceTree = "<group>"; };
-		88B303FA16CCBFD100D9BC44 /* TDRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRatingView.m; sourceTree = "<group>"; };
-		88B3F84516CE0E8A00894764 /* TDArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TDArrow.h; sourceTree = "<group>"; };
-		88B3F84616CE0E8A00894764 /* TDArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDArrow.m; sourceTree = "<group>"; };
+		88B46F4F16DB9FAA00ECFEF7 /* TDArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDArrow.h; sourceTree = "<group>"; };
+		88B46F5016DB9FAA00ECFEF7 /* TDArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDArrow.m; sourceTree = "<group>"; };
+		88B46F5116DB9FAA00ECFEF7 /* TDRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDRatingView.h; sourceTree = "<group>"; };
+		88B46F5216DB9FAA00ECFEF7 /* TDRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDRatingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,17 +102,25 @@
 		88B303E316CCBF9A00D9BC44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88B46F4E16DB9FAA00ECFEF7 /* TDRatingScale */,
 				883374DE16CE0F5A00639114 /* Default-568h@2x.png */,
 				88B303E416CCBF9A00D9BC44 /* TDRatingScale-Info.plist */,
 				88B303E516CCBF9A00D9BC44 /* InfoPlist.strings */,
 				88B303E816CCBF9A00D9BC44 /* main.m */,
 				88B303EA16CCBF9A00D9BC44 /* TDRatingScale-Prefix.pch */,
-				88B303F916CCBFD100D9BC44 /* TDRatingView.h */,
-				88B303FA16CCBFD100D9BC44 /* TDRatingView.m */,
-				88B3F84516CE0E8A00894764 /* TDArrow.h */,
-				88B3F84616CE0E8A00894764 /* TDArrow.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88B46F4E16DB9FAA00ECFEF7 /* TDRatingScale */ = {
+			isa = PBXGroup;
+			children = (
+				88B46F4F16DB9FAA00ECFEF7 /* TDArrow.h */,
+				88B46F5016DB9FAA00ECFEF7 /* TDArrow.m */,
+				88B46F5116DB9FAA00ECFEF7 /* TDRatingView.h */,
+				88B46F5216DB9FAA00ECFEF7 /* TDRatingView.m */,
+			);
+			path = TDRatingScale;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +189,8 @@
 				88B303E916CCBF9A00D9BC44 /* main.m in Sources */,
 				88B303ED16CCBF9A00D9BC44 /* ViewAppDelegate.m in Sources */,
 				88B303F016CCBF9A00D9BC44 /* ViewViewController.m in Sources */,
-				88B303FB16CCBFD100D9BC44 /* TDRatingView.m in Sources */,
-				88B3F84716CE0E8A00894764 /* TDArrow.m in Sources */,
+				88B46F5316DB9FAA00ECFEF7 /* TDArrow.m in Sources */,
+				88B46F5416DB9FAA00ECFEF7 /* TDRatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
